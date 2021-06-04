@@ -68,10 +68,27 @@ namespace CadastroDeClientes
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            if (tbNome.Text == "") { tbNome.Text = "Não cadastrado"; }
+            if (tbCod.Text == "") { tbCod.Text = "Não cadastrado"; }
+            if (data.Text == "") { data.Text = "Não cadastrado"; }
+            if (tbRg.Text == "") { tbRg.Text = "Não cadastrado"; }
+            if (tbCpf.Text == "") { tbCpf.Text = "Não cadastrado"; }
+            if (tbFone.Text == "") { tbFone.Text = "Não cadastrado"; }
+            string Sexo = "Não cadastrado";
+            if (M.Checked == true) { Sexo = "Masculino"; }
+            if (F.Checked == true) { Sexo = "Feminino"; }
+            if (cep.Text == "") { cep.Text = "Não cadastrado"; }
+            if (tbNum.Text == "") { tbNum.Text = "Não cadastrado"; }
+            if (tbRua.Text == "") { tbRua.Text = "Não cadastrado"; }
+            if (tbBairro.Text == "") { tbBairro.Text = "Não cadastrado"; }
+            if (tbCidade.Text == "") { tbCidade.Text = "Não cadastrado"; }
+            if (tbEemail.Text == "") { tbEemail.Text = "Não cadastrado"; }
+            if (tbLink.Text == "") { tbLink.Text = "Não cadastrado"; }
+            if (tbTwitter.Text == "") { tbTwitter.Text = "Não cadastrado"; }
             MessageBox.Show("Cadastro realizado com sucesso, veja as informações:\r\n" +
                 "\r\nDados Pessoais" + "\r\nNome: " + tbNome.Text + "\r\nCódigo: " + tbCod.Text + "\r\nData de Nasc.:" + data.Text +
                 "\r\nRG: " + tbRg.Text + "\r\nCPF: " + tbCpf.Text + "\r\nTelefone: " + tbFone.Text +
-                "\r\nSexo: " + M.Checked + F.Checked + "\r\nEndereço " + "\r\nRua: " + tbRua.Text + 
+                "\r\nSexo: " + Sexo + "\r\nEndereço " + "\r\nRua: " + tbRua.Text + 
                 "\r\nNúmero: " + tbNum.Text + "\r\nReferência: " + tbRef.Text + "\r\nBairro: " + tbBairro.Text +
                 "\r\nCidade: " + tbCidade.Text + "\r\nCEP: " + tbCep.Text + "\r\nEstado: " + tbUF.Text +
                 "\r\nDados Extras" + "\r\nEmail: " + tbEmail.Text + "\r\nLinkedin: " + tbLink.Text +
@@ -89,8 +106,8 @@ namespace CadastroDeClientes
 
             this.M.Checked = true;
 
-            this.tbRua.Text = "R. Furtuoso da Costa";
-            this.tbNum.Text = "879";
+            this.tbRua.Text = "R. dos Bobos";
+            this.tbNum.Text = "0";
             this.tbBairro.Text = "Tatuapé";
             this.tbCidade.Text = "São Paulo";
             this.tbCep.Text = "03311-050";
